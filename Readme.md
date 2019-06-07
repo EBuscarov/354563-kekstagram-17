@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url]
 
 * Студент: [Евгений Бускаров](https://up.htmlacademy.ru/javascript/17/user/354563).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника`.
 
 ---
 
