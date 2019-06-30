@@ -57,3 +57,33 @@ for (i = 0; i < PHOTOS.length; i++) {
   fragment.appendChild(renderPublication(PHOTOS[i]));
 }
 publicationContainer.appendChild(fragment);
+
+
+var ESC_KEYCODE = 27;
+
+var download = document.getElementById('upload-file');
+var editImageForm = document.querySelector('.img-upload__overlay');
+var closeButton = document.getElementById('upload-cancel');
+
+var onPopupEscPress = function (evt) {
+  if (evt.keyCode === ESC_KEYCODE) {
+    closePopup();
+  }
+};
+
+var openPopup = function () {
+  editImageForm.classList.remove('hidden');
+  document.addEventListener('keydown', onPopupEscPress);
+};
+
+var closePopup = function () {
+  editImageForm.classList.add('hidden');
+};
+
+download.addEventListener('change', function () {
+  openPopup();
+});
+
+closeButton.addEventListener('click', function () {
+  closePopup();
+});
